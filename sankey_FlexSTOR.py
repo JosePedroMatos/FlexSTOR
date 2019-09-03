@@ -358,7 +358,7 @@ if __name__=='__main__':
     sns.set_palette('deep')
     sns.set(style="white", context="paper")
     
-    data = pd.read_csv('KWO averages.csv', index_col=[0], header=None).iloc[:,0]
+    data = pd.read_csv('KWO dummy values.csv', index_col=[0], header=None).iloc[:,0]
     KWOSankey(data.transpose()*365.25, title='KWO flows', palette='rainbow', details=True, legend=True, scale=1/365.25, units='Mm³/yr')
     
     plt.show(block=True)
